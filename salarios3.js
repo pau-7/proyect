@@ -742,13 +742,8 @@ selectCountry.addEventListener('change', (e)=>{
   setPrice()
 })
 
-const selectLevel = document.getElementById('select-level') 
+const selectLevel = document.getElementById('select-level');
 selectLevel.addEventListener('change', (e)=>{
-  data={
-    ...data,
-    level: e.target.value
-  }
-  console.log(data)
-  select()
-  setPrice()
-})
+  data.level = e.target.value; // Actualiza el nivel en el objeto data
+  setPrice(); // Actualiza los precios inmediatamente después del cambio
+});
