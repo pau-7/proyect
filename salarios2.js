@@ -652,6 +652,7 @@ selectGroup.addEventListener('change', (e)=>{
   }
   console.log(data)
   select()
+  setPrice()
 })
 
 const selectExperience = document.getElementById('Development-Engineering') 
@@ -662,6 +663,7 @@ selectExperience.addEventListener('change', (e)=>{
   }
   console.log(data)
   select()
+  setPrice()
 })
 
 const selectSales = document.getElementById('Sales-Business-Dev') 
@@ -672,6 +674,7 @@ selectSales.addEventListener('change', (e)=>{
 }
 console.log(data)
 select()
+setPrice()
 })
 
 const selectProduct = document.getElementById('Product-Dev-Design') 
@@ -682,6 +685,7 @@ selectProduct.addEventListener('change', (e)=>{
 }
 console.log(data)
 select()
+setPrice()
 })
 
 const selectFinance = document.getElementById('Finance-Accounting') 
@@ -692,6 +696,7 @@ selectFinance.addEventListener('change', (e)=>{
 }
 console.log(data)
 select()
+setPrice()
 })
 
 const selectInternal = document.getElementById('HR-Internal-Ops') 
@@ -712,6 +717,7 @@ selectMarketing.addEventListener('change', (e)=>{
 }
 console.log(data)
 select()
+setPrice()
 })
 
 const selectAnalytics = document.getElementById('Data-Analytics') 
@@ -722,6 +728,7 @@ selectAnalytics.addEventListener('change', (e)=>{
 }
 console.log(data)
 select()
+setPrice()
 })
 
 const selectCountry = document.getElementById('group-country') 
@@ -732,6 +739,7 @@ selectCountry.addEventListener('change', (e)=>{
   }
   console.log(data)
   select()
+  setPrice()
 })
 
 const selectLevel = document.getElementById('select-level') 
@@ -742,4 +750,5 @@ selectLevel.addEventListener('change', (e)=>{
   }
   console.log(data)
   select()
+  setPrice()
 })
