@@ -636,23 +636,28 @@ const select = ()=>{
         }
        }
 
-window.addEventListener('DOMContentLoaded', (event) => {
-  select(); 
+const updatePrices = () => {
+  select();
   setPrice();
+}
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  updatePrices();
+  document.querySelectorAll('select').forEach(element => {
+    element.addEventListener('change', updatePrices);
+  });
 });
 
 const submit = document.getElementById('submit')
 submit.addEventListener('click', (e)=>{
   console.log(data)
-  setPrice()
-})
-
+  updatePrices();
+});
 
 const selectGroup = document.getElementById('group-select');
 selectGroup.addEventListener('change', (e) => {
   data.group = e.target.value;
-  select();
-  setPrice();
+  updatePrices();
 });
 
 const selectExperience = document.getElementById('Development-Engineering') 
@@ -662,8 +667,8 @@ selectExperience.addEventListener('change', (e)=>{
     experience: e.target.value
   }
   console.log(data)
-  select()
-})
+  updatePrices();
+});
 
 const selectSales = document.getElementById('Sales-Business-Dev') 
 selectSales.addEventListener('change', (e)=>{
@@ -732,12 +737,11 @@ selectCountry.addEventListener('change', (e)=>{
     country: e.target.value
   }
   console.log(data)
-  select()
-})
+  updatePrices();
+});
 
 const selectLevel = document.getElementById('select-level');
 selectLevel.addEventListener('change', (e) => {
   data.level = e.target.value;
-  select();
   setPrice();
 });
