@@ -636,29 +636,23 @@ const select = ()=>{
         }
        }
 
-const updatePrices = () => {
-  select();
-  setPrice();
-}
-
-window.addEventListener('DOMContentLoaded', (event) => {
-  updatePrices();
-  document.querySelectorAll('select').forEach(element => {
-    element.addEventListener('change', updatePrices);
-  });
-});
-
 const submit = document.getElementById('submit')
 submit.addEventListener('click', (e)=>{
   console.log(data)
-  updatePrices();
-});
+  setPrice()
+})
 
-const selectGroup = document.getElementById('group-select');
-selectGroup.addEventListener('change', (e) => {
-  data.group = e.target.value;
-  updatePrices();
-});
+
+const selectGroup = document.getElementById('group-select') 
+selectGroup.addEventListener('change', (e)=>{
+  console.log('calculadora')
+  data={
+    ...data,
+    group: e.target.value
+  }
+  console.log(data)
+  select()
+})
 
 const selectExperience = document.getElementById('Development-Engineering') 
 selectExperience.addEventListener('change', (e)=>{
@@ -667,8 +661,8 @@ selectExperience.addEventListener('change', (e)=>{
     experience: e.target.value
   }
   console.log(data)
-  updatePrices();
-});
+  select()
+})
 
 const selectSales = document.getElementById('Sales-Business-Dev') 
 selectSales.addEventListener('change', (e)=>{
@@ -737,11 +731,15 @@ selectCountry.addEventListener('change', (e)=>{
     country: e.target.value
   }
   console.log(data)
-  updatePrices();
-});
+  select()
+})
 
-const selectLevel = document.getElementById('select-level');
-selectLevel.addEventListener('change', (e) => {
-  data.level = e.target.value;
-  setPrice();
-});
+const selectLevel = document.getElementById('select-level') 
+selectLevel.addEventListener('change', (e)=>{
+  data={
+    ...data,
+    level: e.target.value
+  }
+  console.log(data)
+  select()
+})
