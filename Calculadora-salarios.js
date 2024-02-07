@@ -16,7 +16,7 @@ let data={
 const setDefaultValues = () => {
   // Establecer los valores predeterminados para cada selector
   data.group = 'Development & Engineering';
-  data.experience = 'Infrastructure Engineer';
+  data.experience = 'DevOps Engineer';
   data.country = 'All Latam';
   data.level = 'Senior Level';
 
